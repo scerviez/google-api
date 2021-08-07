@@ -67,15 +67,15 @@ app.get("/search", (req, res) => {
           res.status(400).send({
             code: res.statusCode,
             success: false,
-            message: "Soal Silahkan Diisi",
-            creator: "kurayantod"
+            message: "Query Tidak Bisa Kosong",
+            creator: "@nekozu"
           });
         }else{
           cari(q)
-            .then((data) => {
-              const judul = data.titles[0]
-              const url = data.links[0]
-              const deskripsi = data.snippets[0]
+            .then((res) => {
+              const judul = res.titles[0]
+              const url = res.links[0]
+              const deskripsi = res.snippets[0]
               res.json({
                  status: true,
                  title: judul,
