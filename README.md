@@ -24,7 +24,7 @@ npm install
 node index.js
 ```
 
-after that go to https://localhost:2021/search?q=question
+after that go to http://localhost:2021/
 
 Done
 
